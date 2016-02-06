@@ -25,4 +25,4 @@ lazy val dbUtils = (project in file("db-utils"))
     libraryDependencies ++= Seq(
       "com.typesafe.slick" %% "slick" % "3.1.1"
     )
-  )
+  ).disablePlugins(BackgroundRunPlugin)

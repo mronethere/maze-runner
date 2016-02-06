@@ -1,11 +1,10 @@
-package com.mazerunner.db.dao
+package mazerunner.db.dao
 
 import javax.inject.Inject
 import javax.inject.Singleton
 
-import akka.actor.ActorSystem
-import com.mazerunner.common.models.User
-import com.mazerunner.db.table.UserTable
+import mazerunner.common.models.User
+import mazerunner.db.table.UserTable
 import play.api.db.slick.{HasDatabaseConfigProvider, DatabaseConfigProvider}
 import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import slick.driver.JdbcProfile

@@ -1,6 +1,6 @@
-package com.mazerunner.db
+package mazerunner.db
 
-import com.mazerunner.db.table.UserTable
+import mazerunner.db.table.UserTable
 import slick.backend.DatabaseConfig
 import slick.driver.JdbcProfile
 

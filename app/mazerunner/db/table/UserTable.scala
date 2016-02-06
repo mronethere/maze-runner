@@ -1,6 +1,6 @@
-package com.mazerunner.db.table
+package mazerunner.db.table
 
-import com.mazerunner.common.models.User
+import mazerunner.common.models.User
 import slick.driver.JdbcProfile
 
 trait UserTable {

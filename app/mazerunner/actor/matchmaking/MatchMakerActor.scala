@@ -1,4 +1,4 @@
-package com.mazerunner.actor.matchmaking
+package mazerunner.actor.matchmaking
 
 import akka.actor.{ActorRef, Actor}
 

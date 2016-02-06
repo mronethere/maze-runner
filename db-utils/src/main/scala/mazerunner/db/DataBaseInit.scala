@@ -1,4 +1,4 @@
-package com.mazerunner.db
+package mazerunner.db
 
 import slick.backend.DatabaseConfig
 import slick.driver.MySQLDriver

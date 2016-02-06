@@ -1,5 +1,5 @@
 # Home page
-GET     /                           @com.mazerunner.controller.WelcomeController.index
+GET     /                           @mazerunner.controller.WelcomeController.index
 
 # Auth
 #POST    /login                      @com.mazerunner.controller.WelcomeController.login

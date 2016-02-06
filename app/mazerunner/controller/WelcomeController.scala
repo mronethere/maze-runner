@@ -1,4 +1,4 @@
-package com.mazerunner.controller
+package mazerunner.controller
 
 import play.api.mvc.{Action, Controller}
 

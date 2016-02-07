@@ -3,7 +3,7 @@ package mazerunner.db.dao
 import javax.inject.Inject
 import javax.inject.Singleton
 
-import mazerunner.common.models.User
+import mazerunner.common.model.User
 import mazerunner.db.table.UserTable
 import play.api.db.slick.{HasDatabaseConfigProvider, DatabaseConfigProvider}
 import play.api.libs.concurrent.Execution.Implicits.defaultContext

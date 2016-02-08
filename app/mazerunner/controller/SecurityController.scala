@@ -34,6 +34,13 @@ class SecurityController @Inject()(@Named("session-actor") sessionActor: ActorRe
       }
       .recover(withRecover)
   }
+
+  def register = Action.async(parse.json) { request =>
+    transformAsFuture(request.body.validate[User])
+      .flatMap(user => userRepository.insert(user))
+      .map(_ => Ok("registration is successful"))
+      .recover(withRecover)
+  }
 }
 
 object SecurityHelper {

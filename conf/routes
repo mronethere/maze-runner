@@ -2,9 +2,9 @@
 GET     /                           @mazerunner.controller.WelcomeController.index
 
 # Auth
-#POST    /login                      @com.mazerunner.controller.WelcomeController.login
+POST    /login                      @mazerunner.controller.SecurityController.login
 #GET     /logout                     @com.mazerunner.controller.WelcomeController.logout
-#POST    /register                   @com.mazerunner.controller.WelcomeController.register
+POST    /register                   @mazerunner.controller.SecurityController.register
 
 # Static resources
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

@@ -9,3 +9,6 @@ object Credentials {
 }
 
 case class User(username: String, password: String)
+object User {
+  implicit val credentialsFormat = Json.format[User]
+}

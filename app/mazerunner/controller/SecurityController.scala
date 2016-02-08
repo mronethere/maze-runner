@@ -26,7 +26,7 @@ class SecurityController @Inject()(@Named("session-actor") sessionActor: ActorRe
     transformAsFuture(request.body.validate[Credentials])
       .flatMap(creds => userRepository.findByUsernameAndPassword(creds.username, creds.password))
       .flatMap { user =>
-        val token = SecurityHelper.generateToken
+        val token = UUID.randomUUID().toString
         (sessionActor ? CacheUser(user.username, token)).mapTo[CacheStatus].map {
           case CacheAccepted => Ok(token)
           case CacheDeclined => Forbidden("forbidden")
@@ -41,8 +41,4 @@ class SecurityController @Inject()(@Named("session-actor") sessionActor: ActorRe
       .map(_ => Ok("registration is successful"))
       .recover(withRecover)
   }
-}
-
-object SecurityHelper {
-  def generateToken = UUID.randomUUID().toString
 }

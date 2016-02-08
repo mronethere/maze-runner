@@ -5,6 +5,7 @@ lazy val rootSettings = Seq(
   routesGenerator := InjectedRoutesGenerator,
   fork in Test := true,
   libraryDependencies ++= Seq(
+    cache,
     specs2 % Test,
     "com.typesafe.play" %% "play-slick" % "1.1.1",
     "mysql" % "mysql-connector-java" % "5.1.16",
